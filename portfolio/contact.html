@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Vinit Gaonkar</title>
+  <meta name="description" content="Get in touch with Vinit Gaonkar for freelance web development work. Send a message using the accessible contact form or reach out directly by email." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vinit.jo3.org/contact.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact | Vinit Gaonkar" />
+  <meta property="og:description" content="Get in touch about freelance web development work." />
+  <meta property="og:url" content="https://vinit.jo3.org/contact.html" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b6b5c'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="logo"><a href="index.html">Vinit Gaonkar<span class="logo-mono" aria-hidden="true">.dev</span></a></p>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home<span class="nav-file" aria-hidden="true">index.html</span></a></li>
+          <li><a href="about.html">About<span class="nav-file" aria-hidden="true">about.html</span></a></li>
+          <li><a href="projects.html">Projects<span class="nav-file" aria-hidden="true">projects.html</span></a></li>
+          <li><a href="contact.html" aria-current="page">Contact<span class="nav-file" aria-hidden="true">contact.html</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section contact-section">
+      <div class="container contact-grid">
+
+        <div class="contact-form-wrap">
+          <p class="eyebrow">// contact</p>
+          <h1>Let's work together</h1>
+          <p class="form-hint">
+            Fill out the form below and I'll get back to you within a couple of
+            business days. Fields marked with an asterisk (*) are required.
+          </p>
+
+          <!--
+            NOTE: this is a static HTML page with no back end, so the form
+            needs a processing endpoint before it can actually send messages.
+            Replace the action URL with your own server endpoint, or a form
+            service such as Formspree or Netlify Forms. See the setup
+            instructions provided alongside this file for details.
+          -->
+          <form action="https://example.com/api/contact-form" method="post">
+            <fieldset>
+              <legend>Your details</legend>
+
+              <div class="form-field">
+                <label for="name">Full name <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email address <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-hint"
+                />
+                <span class="field-hint" id="email-hint">We'll only use this to reply to your message.</span>
+              </div>
+
+              <div class="form-field">
+                <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  autocomplete="off"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  aria-required="true"
+                  aria-describedby="message-hint"
+                ></textarea>
+                <span class="field-hint" id="message-hint">Let me know a bit about your project and timeline.</span>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+
+        <aside class="contact-info" aria-labelledby="contact-info-heading">
+          <h2 id="contact-info-heading">Contact information</h2>
+          <address>
+            <p><a href="mailto:vinitgaonkar38@gmail.com">vinitgaonkar38@gmail.com</a></p>
+            <p><a href="tel:+919503366499">+91 95033 66499</a></p>
+            <p>Betim, India</p>
+          </address>
+
+          <h2>Find me online</h2>
+          <ul class="social-list">
+            <li><a href="https://github.com/account">GitHub profile</a></li>
+          </ul>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="logo"><a href="index.html">Vinit Gaonkar<span class="logo-mono" aria-hidden="true">.dev</span></a></p>
+        <p class="footer-tagline">Web Developer &amp; UI/UX Designer — final-year BCA student.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-contact">
+        <a href="mailto:vinitgaonkar38@gmail.com">vinitgaonkar38@gmail.com</a>
+        <a href="https://github.com/account">GitHub profile</a>
+      </address>
+    </div>
+
+    <div class="container footer-meta">
+      <p>&copy; 2026 Vinit Gaonkar. All rights reserved.</p>
+      <p class="status-line">// built with semantic HTML5 &amp; CSS3 — no frameworks</p>
+    </div>
+  </footer>
+
+</body>
+</html>
