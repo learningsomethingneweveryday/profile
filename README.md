@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Vinir
+# 👋 Hi, I'm Vinit
 
 ### 💻 Student | Web Developer | Tech Enthusiast
 
