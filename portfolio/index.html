@@ -4,58 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO: unique, descriptive title and description for this page -->
   <title>Vinit Gaonkar | Web Developer Portfolio</title>
-  <meta name="description" content="Vinit Gaonkar is a web developer building accessible, semantic, fast websites with HTML5 and CSS3. View projects and get in touch." />
+  <meta name="description" content="Vinit Gaonkar is a web developer and UI/UX designer building clean, functional interfaces. View projects and get in touch." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://vinit.jo3.org/index.html" />
 
-  <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Vinit Gaonkar | Web Developer Portfolio" />
-  <meta property="og:description" content="Web developer building accessible, semantic, fast websites with HTML5 and CSS3." />
+  <meta property="og:description" content="Web developer and UI/UX designer building clean, functional interfaces." />
   <meta property="og:url" content="https://vinit.jo3.org/index.html" />
 
+  <!-- Prevents a flash of the wrong theme: applies a saved choice before
+       first paint. Tiny, synchronous, and does nothing else. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("portfolio-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b6b5c'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Skip link: first focusable element on the page, jumps past repeated nav -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-inner">
       <p class="logo"><a href="index.html">Vinit Gaonkar<span class="logo-mono" aria-hidden="true">.dev</span></a></p>
+
       <nav class="site-nav" aria-label="Primary">
-        <ul>
+        <ul id="primary-nav-list">
           <li><a href="index.html" aria-current="page">Home<span class="nav-file" aria-hidden="true">index.html</span></a></li>
           <li><a href="about.html">About<span class="nav-file" aria-hidden="true">about.html</span></a></li>
+          <li><a href="index.html#skills">Skills</a></li>
           <li><a href="projects.html">Projects<span class="nav-file" aria-hidden="true">projects.html</span></a></li>
           <li><a href="contact.html">Contact<span class="nav-file" aria-hidden="true">contact.html</span></a></li>
         </ul>
       </nav>
+
+      <div class="nav-wrap">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">◑</span>
+          <span class="theme-toggle-text">Dark mode</span>
+        </button>
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
 
-    <!-- Hero: the page's single primary heading (h1) -->
     <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">// hello, this is</p>
-        <h1>Vinit Gaonkar</h1>
-        <p class="hero-role">Web Developer &amp; Front-End Developer</p>
-        <p class="hero-intro">
-          Hi, I'm Vinit — a BCA student specializing in web development and
-          UI/UX design. I enjoy building clean, functional interfaces and
-          turning ideas into user-friendly digital experiences. Explore my
-          work below, and feel free to reach out — I'm open to new projects
-          and opportunities.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="projects.html">View my projects</a>
-          <a class="btn btn-secondary" href="contact.html">Get in touch</a>
+      <div class="container hero-grid">
+        <div class="hero-inner">
+          <p class="eyebrow">// hello, this is</p>
+          <h1>Vinit Gaonkar</h1>
+          <p class="hero-role">Web Developer &amp; Front-End Developer</p>
+          <p class="hero-intro">
+            Hi, I'm Vinit — a BCA student specializing in web development and
+            UI/UX design. I enjoy building clean, functional interfaces and
+            turning ideas into user-friendly digital experiences. Explore my
+            work below, and feel free to reach out — I'm open to new projects
+            and opportunities.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="projects.html">View my projects</a>
+            <a class="btn btn-secondary" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Decorative "editor window" panel — CSS-only, no image asset needed -->
+        <div class="hero-panel" aria-hidden="true">
+          <div class="hero-panel-bar">
+            <span class="hero-panel-dot"></span>
+            <span class="hero-panel-dot"></span>
+            <span class="hero-panel-dot"></span>
+          </div>
+          <div class="hero-panel-body">
+            <p><span class="code-key">const</span> developer = {</p>
+            <p>&nbsp;&nbsp;name: <span class="code-str">"Vinit Gaonkar"</span>,</p>
+            <p>&nbsp;&nbsp;role: <span class="code-str">"Web Developer"</span>,</p>
+            <p>&nbsp;&nbsp;stack: [<span class="code-str">"JS"</span>, <span class="code-str">"Node"</span>, <span class="code-str">"PHP"</span>, <span class="code-str">"Python"</span>],</p>
+            <p>&nbsp;&nbsp;status: <span class="code-str">"open to new projects"</span></p>
+            <p>};</p>
+          </div>
         </div>
       </div>
 
@@ -76,12 +117,12 @@
       </dl>
     </section>
 
-    <section class="section skills-section" aria-labelledby="skills-heading">
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
       <div class="container">
         <p class="eyebrow">// what i do</p>
         <h2 id="skills-heading">Core skills</h2>
 
-        <div class="card-grid">
+        <div class="grid skills-grid">
           <article class="skill-card">
             <p class="skill-tag">&lt;JavaScript /&gt;</p>
             <h3>Interactive front-ends</h3>
@@ -143,9 +184,10 @@
 
     <div class="container footer-meta">
       <p>&copy; 2026 Vinit Gaonkar. All rights reserved.</p>
-      <p class="status-line">// built with semantic HTML5 &amp; CSS3 — no frameworks</p>
+      <p class="status-line">// built with HTML5, CSS3 &amp; a little vanilla JS</p>
     </div>
   </footer>
 
+  <script src="js/theme.js" defer></script>
 </body>
 </html>

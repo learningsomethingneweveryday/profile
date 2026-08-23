@@ -5,17 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>About | Vinit Gaonkar</title>
-  <meta name="description" content="Learn about Vinit Gaonkar — a web developer focused on accessible, semantic front-end development, plus skills, technologies, and career background." />
+  <meta name="description" content="Learn about Vinit Gaonkar — a web developer and UI/UX design student, plus skills, technologies, and education background." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://vinit.jo3.org/about.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="About | Vinit Gaonkar" />
-  <meta property="og:description" content="Web developer focused on accessible, semantic front-end development." />
+  <meta property="og:description" content="Web developer and UI/UX design student." />
   <meta property="og:url" content="https://vinit.jo3.org/about.html" />
 
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("portfolio-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b6b5c'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -24,14 +35,27 @@
   <header class="site-header">
     <div class="container header-inner">
       <p class="logo"><a href="index.html">Vinit Gaonkar<span class="logo-mono" aria-hidden="true">.dev</span></a></p>
+
       <nav class="site-nav" aria-label="Primary">
-        <ul>
+        <ul id="primary-nav-list">
           <li><a href="index.html">Home<span class="nav-file" aria-hidden="true">index.html</span></a></li>
           <li><a href="about.html" aria-current="page">About<span class="nav-file" aria-hidden="true">about.html</span></a></li>
+          <li><a href="index.html#skills">Skills</a></li>
           <li><a href="projects.html">Projects<span class="nav-file" aria-hidden="true">projects.html</span></a></li>
           <li><a href="contact.html">Contact<span class="nav-file" aria-hidden="true">contact.html</span></a></li>
         </ul>
       </nav>
+
+      <div class="nav-wrap">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">◑</span>
+          <span class="theme-toggle-text">Dark mode</span>
+        </button>
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -156,9 +180,10 @@
 
     <div class="container footer-meta">
       <p>&copy; 2026 Vinit Gaonkar. All rights reserved.</p>
-      <p class="status-line">// built with semantic HTML5 &amp; CSS3 — no frameworks</p>
+      <p class="status-line">// built with HTML5, CSS3 &amp; a little vanilla JS</p>
     </div>
   </footer>
 
+  <script src="js/theme.js" defer></script>
 </body>
 </html>
